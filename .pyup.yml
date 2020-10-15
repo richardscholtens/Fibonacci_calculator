@@ -26,14 +26,14 @@ search: True
 # default: empty
 # allowed: list
 requirements:
-  - requirements/staging.txt:
+  - requirements_staging.txt:
       # update all dependencies and pin them
       update: all
       pin: True
-  - requirements/dev.txt:
+  - requirements_dev.txt:
       # don't update dependencies, use global 'pin' default
       update: False
-  - requirements/prod.txt:
+  - requirements_production.txt:
       # update insecure only, pin all
       update: insecure
       pin: True
