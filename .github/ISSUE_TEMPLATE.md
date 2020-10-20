@@ -1,5 +1,5 @@
-* Fibonacci Calculator version:
-* Python version:
+* Fibonacci Calculator version: 0.1.0
+* Python version: 3.6, 3.7, 3.8
 * Operating System:
 
 ### Description

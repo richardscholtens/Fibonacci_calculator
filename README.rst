@@ -7,7 +7,7 @@ Fibonacci Calculator
         :target: https://pypi.python.org/pypi/fibonacci_calculator
 
 .. image:: https://img.shields.io/travis/richardscholtens/fibonacci_calculator.svg
-        :target: https://travis-ci.com/richardscholtens/fibonacci_calculator
+        :target: https://travis-ci.com/richardscholtens/fibonacci_calculator?branch=master
 
 .. image:: https://readthedocs.org/projects/fibonacci-calculator/badge/?version=latest
         :target: https://fibonacci-calculator.readthedocs.io/en/latest/?badge=latest
