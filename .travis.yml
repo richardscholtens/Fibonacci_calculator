@@ -19,9 +19,9 @@ script: tox
 deploy:
   provider: pypi
   distributions: sdist bdist_wheel
-  user: richardscholtens
+  user: __token__
   password:
-    secure: U8n!MSe&7D7,cTa
+    secure: pypi-AgENdGVzdC5weXBpLm9yZwIkMDU4Yjc0NjUtNjI0OS00MjZjLWJiZDctZmEyNjdhYjI2YWE1AAIleyJwZXJtaXNzaW9ucyI6ICJ1c2VyIiwgInZlcnNpb24iOiAxfQAABiBfVy_rCgrGEVCoG77IwYHusHI90MjjN6hRnf8pDUGbxA
   on:
     tags: true
     repo: richardscholtens/fibonacci_calculator
