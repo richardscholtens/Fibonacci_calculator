@@ -47,7 +47,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'Fibonacci Calculator'
-copyright = "2020, Richard Scholtens"
+copyright = "2020, J.F.P (Richard) Scholtens"
 author = "J.F.P (Richard) Scholtens"
 
 # The version info for the project you're documenting, acts as replacement
