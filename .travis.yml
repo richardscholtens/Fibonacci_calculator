@@ -21,7 +21,7 @@ deploy:
   distributions: sdist bdist_wheel
   user: __token__
   password:
-    secure: pypi-AgENdGVzdC5weXBpLm9yZwIkMDU4Yjc0NjUtNjI0OS00MjZjLWJiZDctZmEyNjdhYjI2YWE1AAIleyJwZXJtaXNzaW9ucyI6ICJ1c2VyIiwgInZlcnNpb24iOiAxfQAABiBfVy_rCgrGEVCoG77IwYHusHI90MjjN6hRnf8pDUGbxA
+    secure: pypi-AgEIcHlwaS5vcmcCJGI0NWExNjhjLWEwZGQtNGQ0Ny1iZjlhLTI1ZGNmZGMyMzhlYgACJXsicGVybWlzc2lvbnMiOiAidXNlciIsICJ2ZXJzaW9uIjogMX0AAAYgiridWKZygfv4DhstZANeL1jTvXjbOrwLPtPd49VBM0o
   on:
     tags: true
     repo: richardscholtens/fibonacci_calculator
