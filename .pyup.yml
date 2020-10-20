@@ -8,10 +8,10 @@ update: all
 # allowed: True, False
 pin: True
 
-## set the default branch
-## default: empty, the default branch on GitHub
-#branch: dev
-#
+# set the default branch
+# default: empty, the default branch on GitHub
+branch: dev
+
 ## update schedule
 ## default: empty
 ## allowed: "every day", "every week", ..
