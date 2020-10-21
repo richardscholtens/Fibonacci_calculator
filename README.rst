@@ -20,7 +20,7 @@ Fibonacci Calculator
 
 
 
-Python Boilerplate contains all the boilerplate you need to create a Python package.
+A calculator that calculates Fibonacci numbers from 0 to n, indexes n-number and returns n-number.
 
 
 * Free software: MIT license
