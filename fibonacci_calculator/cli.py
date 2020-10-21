@@ -21,7 +21,7 @@ import click
 #         click.echo('Please give a number with a value of 2 or higher.')
 
 
-
+@click.command()
 def main(args=None):
     """Console script for fibonacci_calculator."""
 
