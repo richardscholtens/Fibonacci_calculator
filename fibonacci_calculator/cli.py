@@ -1,7 +1,7 @@
 """Console script for fibonacci_calculator."""
 import sys
 import click
-from fibonacci_calculator import FibonacciSequenceService
+# from fibonacci_calculator import FibonacciSequenceService
 
 
 
