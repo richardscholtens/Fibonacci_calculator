@@ -32,7 +32,7 @@ requirements:
       pin: True
   - requirements_dev.txt:
       # don't update dependencies, use global 'pin' default
-      update: False
+      update: True
   - requirements_production.txt:
       # update insecure only, pin all
       update: insecure
