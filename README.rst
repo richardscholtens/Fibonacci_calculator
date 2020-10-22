@@ -14,10 +14,9 @@ Fibonacci Calculator
         :alt: Documentation Status
 
 
-.. image:: https://pyup.io/repos/github/richardscholtens/fibonacci_calculator/shield.svg
+.. image:: https://pyup.io/repos/github/richardscholtens/Fibonacci_Calculator/shield.svg
      :target: https://pyup.io/repos/github/richardscholtens/Fibonacci_Calculator/
      :alt: Updates
-
 
 
 A calculator that calculates Fibonacci numbers from 0 to n, indexes n-number and returns n-number.
