@@ -1,5 +1,7 @@
 # Config file for automatic testing at travis-ci.com
 
+version: ~> 1.0
+
 language: python
 python:
   - 3.8
