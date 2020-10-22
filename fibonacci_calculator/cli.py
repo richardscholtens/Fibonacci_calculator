@@ -2,23 +2,25 @@
 import sys
 import click
 # from fibonacci_calculator import FibonacciSequenceService
+from typing import List
 
 
-
-# @click.command()
-# @click.option('--length', default=0, required=True, help='Set length of Fibonacci Sequence')
-# def set_length(length):
-#     """
-#     Prints out sequence in
-#     """
-#     click.echo('Given input length: {0}'.format(length))
-#     if length > 1:
-#         sequence = FibonacciSequenceService()
-#         sequence.increase_sequence_length(length)
-#         click.echo(sequence.get_sequence())
-#         return sequence.get_sequence()
-#     else:
-#         click.echo('Please give a number with a value of 2 or higher.')
+@click.command()
+@click.option('--length', default=0, required=True, help='Set length of Fibonacci Sequence')
+def set_length(length) -> List[int]:
+    """
+    Returns a list with the Fibonacci Sequence as long as the given length.
+    Note, input must be higher then 1.
+    :param length: int
+    """
+    click.echo('Given input length: {0}'.format(length))
+    if length > 1:
+        sequence = FibonacciSequenceService()
+        sequence.increase_sequence_length(length)
+        click.echo(sequence.get_sequence())
+        return sequence.get_sequence()
+    else:
+        click.echo('Please give a number with a value of 2 or higher.')
 
 
 @click.command()

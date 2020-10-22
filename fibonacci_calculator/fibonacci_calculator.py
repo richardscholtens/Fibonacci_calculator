@@ -25,13 +25,18 @@ class FibonacciSequence():
 
         self.__sequence = [0, 1]
 
+
     def __repr__(self):
         """
+        Representation for FibonacciSequence
         """
         return f"{typename(self)}(__sequence={self.__sequence})"
 
 
     def __getitem__(self, index:int) -> int:
+        """
+        Return element of nth index of FibonacciSequence object.
+        """
         try:
             return self.__sequence[index]
         except IndexError:
