@@ -83,7 +83,7 @@ def test_get_nth() -> None:
     """
     fibnum = fibonacci_calculator.FibonacciSequenceService()
     fibnum.increase_sequence_length(16)
-    number = fibnum.get_nth(15)
+    number = fibnum.get_nth(16)
     assert type(number) == type(0)
 
 
@@ -129,15 +129,6 @@ def test_get_sequence_index_bad() -> None:
     assert fibnum.get_sequence_index(5) != 6
 
 
-def add_next_fibonacci_number() -> None:
-    """
-    Good test case
-    """
-    # fibnum = ibonacci_calculator.fibonacci_calculator.FibonacciSequenceService()
-    # output
-    #
-
-
 def test_time_get_sequence() -> None:
     """
     Test the passed time using the get_sequence().
@@ -166,4 +157,5 @@ def test_time_get_sequence_index() -> None:
     start = time.time()
     fibnum.get_sequence_index(233)
     print('\n\nFunction:\t get_sequence_index()\nTime passed:\t', time.time() - start)
+
 

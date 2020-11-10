@@ -114,8 +114,8 @@ class FibonacciSequenceService():
         @param nth: int
         """
         try:
-            print(self.Sequence[nth])
-            return self.Sequence[nth]
+            print(self.Sequence[nth-1])
+            return self.Sequence[nth-1]
         except TypeError:
             print('Please give integer as input.')
 
