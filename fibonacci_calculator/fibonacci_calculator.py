@@ -127,10 +127,8 @@ class FibonacciSequenceService():
         @param number: int
         """
         self.Sequence = FibonacciSequence()
-        if number == 0:
-            return self.Sequence.sequence[0]
-        elif number == 1:
-            return self.Sequence.sequence[1]
+        if number == 0 or number == 1:
+            return self.Sequence.sequence[number]
         else:
             try:
                 for i in range(number):
@@ -144,4 +142,3 @@ class FibonacciSequenceService():
 
             except TypeError:
                 print('Please give an integer as input value.')
-
