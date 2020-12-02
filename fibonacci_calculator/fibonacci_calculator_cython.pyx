@@ -143,6 +143,3 @@ class FibonacciSequenceService():
             except TypeError:
                 print('Please give an integer as input value.')
 
-
-print(FibonacciSequence())
-print(FibonacciSequenceService())

@@ -25,6 +25,7 @@ def set_length(length) -> List[int]:
 
 @click.command()
 def main(args=None):
+
     """Console script for fibonacci_calculator."""
 
     click.echo("Replace this message by putting your code into "
