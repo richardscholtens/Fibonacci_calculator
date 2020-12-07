@@ -40,8 +40,13 @@ This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypack
 .. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
 
 
+Cython modules
+-------
 
-If one wants to use the Cython modules one has to make use of the Cython library.
+If one wants to use the Cython modules one has to make use of the Cython library:
+
+https://cython.readthedocs.io/en/latest/
+https://cython.readthedocs.io/en/latest/src/tutorial/cython_tutorial.html
 
 EXAMPLE:
 
