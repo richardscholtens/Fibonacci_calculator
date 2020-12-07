@@ -31,6 +31,7 @@ importlib-metadata==2.0.0
 jinja2-time==0.2.0
 mccabe==0.6.1
 more-itertools==8.5.0
+numpy==1.19.0
 packaging==20.4
 pathtools==0.1.2
 pip==20.2.4
@@ -66,5 +67,5 @@ virtualenv==20.0.35
 watchdog==0.10.3
 wcwidth==0.2.5
 webencodings==0.5.1
-wheel==0.35.1
+wheel==0.36.0
 zipp==3.3.1

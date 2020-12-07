@@ -2,7 +2,11 @@
 
 """The setup script."""
 
-from setuptools import setup, find_packages
+from setuptools import setup, find_packages, Extension
+from Cython.Build import cythonize
+
+# import numpy as np
+# from distutils.extension import Extension
 
 with open('README.rst') as readme_file:
     readme = readme_file.read()
@@ -15,6 +19,16 @@ requirements = ['Click>=7.0', ]
 setup_requirements = ['pytest-runner', ]
 
 test_requirements = ['pytest>=3', ]
+
+# ext_modules = cythonize([
+#     Extension("fibonacci_calculator.fibonacci_calculator", ["fibonacci_calculator/fibonacci_calculator.py"]),
+# ],**{"compiler_directives": {"profile": True}, "annotate": True}
+# )
+
+exts = [Extension("fibonacci_calculator.fibonacci_calculator", ["fibonacci_calculator/fibonacci_calculator.py"]),]
+        # Extension("fibonacci_calculator.fibonacci_calculator", ["fibonacci_calculator/__init__.py"])]
+ext_options = {"compiler_directives": {"profile": True}, "annotate": True}
+
 
 setup(
     author="Richard Scholtens",
@@ -30,7 +44,7 @@ setup(
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
     ],
-    description="Python Boilerplate contains all the boilerplate you need to create a Python package.",
+    description="Fibonacci Calculator including normal Python code and Cython wrapper.",
     entry_points={
         'console_scripts': [
             'fibonacci_calculator=fibonacci_calculator.cli:main',
@@ -47,6 +61,12 @@ setup(
     test_suite='tests',
     tests_require=test_requirements,
     url='https://github.com/richardscholtens/Fibonacci_Calculator',
-    version='0.1.2',
+    version='0.1.18',
     zip_safe=False,
+    # ext_modules = ext_modules,
+    # ext_modules=cythonize(["fibonacci_calculator/__init__.pyx"]),
+    ext_modules=cythonize(exts, **ext_options),
+    # ext_modules=cythonize("fibonacci_calculator/fibonacci_calculator.py")
+    # include_dirs=np.get_include(),
+
 )
