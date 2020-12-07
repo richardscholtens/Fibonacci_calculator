@@ -61,7 +61,7 @@ setup(
     test_suite='tests',
     tests_require=test_requirements,
     url='https://github.com/richardscholtens/Fibonacci_Calculator',
-    version='0.1.18',
+    version='0.1.19',
     zip_safe=False,
     # ext_modules = ext_modules,
     # ext_modules=cythonize(["fibonacci_calculator/__init__.pyx"]),
