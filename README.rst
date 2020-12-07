@@ -38,3 +38,18 @@ This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypack
 
 .. _Cookiecutter: https://github.com/audreyr/cookiecutter
 .. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+
+
+
+If one wants to use the Cython modules one has to make use of the Cython library.
+
+EXAMPLE:
+
+import pyximport
+pyximport.install()
+
+
+from fibonacci_calculator.fibonacci_calculator_cython import FibonacciSequence
+
+print(FibonacciSequence())
+
