@@ -5,8 +5,7 @@
 from setuptools import setup, find_packages, Extension
 from Cython.Build import cythonize
 
-# import numpy as np
-# from distutils.extension import Extension
+import numpy as np
 
 with open('README.rst') as readme_file:
     readme = readme_file.read()
@@ -20,14 +19,12 @@ setup_requirements = ['pytest-runner', ]
 
 test_requirements = ['pytest>=3', ]
 
-# ext_modules = cythonize([
-#     Extension("fibonacci_calculator.fibonacci_calculator", ["fibonacci_calculator/fibonacci_calculator.py"]),
-# ],**{"compiler_directives": {"profile": True}, "annotate": True}
-# )
 
-exts = [Extension("fibonacci_calculator.fibonacci_calculator", ["fibonacci_calculator/fibonacci_calculator.py"]),]
-        # Extension("fibonacci_calculator.fibonacci_calculator", ["fibonacci_calculator/__init__.py"])]
+exts = [Extension("fibonacci_calculator.fibonacci_calculator", ["fibonacci_calculator/fibonacci_calculator.py"]),
+        Extension("fibonacci_calculator.fibonacci_calculator", ["fibonacci_calculator/fibonacci_calculator_cython.py"]),]
+
 ext_options = {"compiler_directives": {"profile": True}, "annotate": True}
+
 
 
 setup(
@@ -53,6 +50,7 @@ setup(
     install_requires=requirements,
     license="MIT license",
     long_description=readme + '\n\n' + history,
+    long_description_content_type='text/markdown',
     include_package_data=True,
     keywords='fibonacci_calculator',
     name='fibonacci_calculator',
@@ -61,12 +59,9 @@ setup(
     test_suite='tests',
     tests_require=test_requirements,
     url='https://github.com/richardscholtens/Fibonacci_Calculator',
-    version='0.1.19',
+    version='0.1.20',
     zip_safe=False,
-    # ext_modules = ext_modules,
-    # ext_modules=cythonize(["fibonacci_calculator/__init__.pyx"]),
-    ext_modules=cythonize(exts, **ext_options),
-    # ext_modules=cythonize("fibonacci_calculator/fibonacci_calculator.py")
-    # include_dirs=np.get_include(),
-
+    # ext_modules=cythonize(exts, **ext_options),
+    ext_modules=cythonize(["fibonacci_calculator/__init__.pyx"], **ext_options),
+    include_dirs=np.get_include(),
 )
