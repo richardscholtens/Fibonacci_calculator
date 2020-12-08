@@ -144,5 +144,5 @@ class FibonacciSequenceService():
                 print('Please give an integer as input value.')
 
 
-#Pure Python code
-print('Python code')
+# Pure Python code
+# print('Python code')

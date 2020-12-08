@@ -143,5 +143,5 @@ class FibonacciSequenceService():
             except TypeError:
                 print('Please give an integer as input value.')
 
-#Pure Cython code
-print('Cython code')
+# Pure Cython code
+# print('Cython code')
