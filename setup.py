@@ -4,6 +4,7 @@
 
 from setuptools import setup, find_packages, Extension
 from Cython.Build import cythonize
+from Cython.Distutils import build_ext
 
 import numpy as np
 
@@ -13,15 +14,19 @@ with open('README.rst') as readme_file:
 with open('HISTORY.rst') as history_file:
     history = history_file.read()
 
-requirements = ['Click>=7.0', ]
+requirements = ['Click>=7.0',
+                'numpy==1.19.2',
+                'PyObjC;platform_system=="Darwin"',
+                'PyGObject;platform_system=="Linux"',
+                'playsound==1.2.2',
+                'Cython>=0.29.21',]
 
 setup_requirements = ['pytest-runner', ]
 
 test_requirements = ['pytest>=3', ]
 
-
-exts = [Extension("fibonacci_calculator.fibonacci_calculator", ["fibonacci_calculator/fibonacci_calculator.py"]),
-        Extension("fibonacci_calculator.fibonacci_calculator", ["fibonacci_calculator/fibonacci_calculator_cython.py"]),]
+# exts = [ #Extension("fibonacci_calculator.fibonacci_calculator", ["fibonacci_calculator/fibonacci_calculator_cython.py"]),]
+#         Extension("fibonacci_calculator.fibonacci_calculator", ["fibonacci_calculator/fibonacci_calculator.py"]),]
 
 ext_options = {"compiler_directives": {"profile": True}, "annotate": True}
 
@@ -54,14 +59,15 @@ setup(
     include_package_data=True,
     keywords='fibonacci_calculator',
     name='fibonacci_calculator',
-    packages=find_packages(include=['fibonacci_calculator', 'fibonacci_calculator.*']),
+    packages=find_packages(include=['fibonacci_calculator', 'fibonacci_calculator.*',]),
     setup_requires=setup_requirements,
     test_suite='tests',
     tests_require=test_requirements,
     url='https://github.com/richardscholtens/Fibonacci_Calculator',
-    version='0.1.20',
+    version='0.1.23',
     zip_safe=False,
     # ext_modules=cythonize(exts, **ext_options),
     ext_modules=cythonize(["fibonacci_calculator/__init__.pyx"], **ext_options),
     include_dirs=np.get_include(),
+    cmdclass = {'build_ext': build_ext},
 )

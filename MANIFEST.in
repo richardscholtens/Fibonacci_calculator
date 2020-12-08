@@ -12,4 +12,4 @@ recursive-include docs *.rst conf.py Makefile make.bat *.jpg *.png *.gif
 
 
 include fibonacci_calculator/__init__.pxd
-include fibonacci_calculator/data
+
