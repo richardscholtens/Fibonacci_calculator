@@ -16,9 +16,6 @@ with open('HISTORY.rst') as history_file:
 
 requirements = ['Click>=7.0',
                 'numpy==1.19.2',
-                'PyObjC;platform_system=="Darwin"',
-                'PyGObject;platform_system=="Linux"',
-                'playsound==1.2.2',
                 'Cython>=0.29.21',]
 
 setup_requirements = ['pytest-runner', ]
@@ -64,7 +61,7 @@ setup(
     test_suite='tests',
     tests_require=test_requirements,
     url='https://github.com/richardscholtens/Fibonacci_Calculator',
-    version='0.1.24',
+    version='0.1.25',
     zip_safe=False,
     ext_modules=cythonize(exts, **ext_options),
     include_dirs=np.get_include(),
