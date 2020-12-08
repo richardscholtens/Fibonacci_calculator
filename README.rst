@@ -43,18 +43,8 @@ This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypack
 Cython modules
 -------
 
-If one wants to use the Cython modules one has to make use of the Cython library:
+The library was enhanced using the Cython library to improve speed efficiency.
 
 https://cython.readthedocs.io/en/latest/
-https://cython.readthedocs.io/en/latest/src/tutorial/cython_tutorial.html
 
-EXAMPLE:
-
-import pyximport
-pyximport.install()
-
-
-from fibonacci_calculator.fibonacci_calculator_cython import FibonacciSequence
-
-print(FibonacciSequence())
 
