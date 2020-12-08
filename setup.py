@@ -22,7 +22,7 @@ setup_requirements = ['pytest-runner', ]
 
 test_requirements = ['pytest>=3', ]
 
-exts = [Extension("fibonacci_calculator.fibonacci_calculator", ["fibonacci_calculator/fibonacci_calculator_cython.py"]),]
+exts = [Extension("fibonacci_calculator.fibonacci_calculator", ["fibonacci_calculator/fibonacci_calculator_cython.pyx"]),]
         # Extension("fibonacci_calculator.fibonacci_calculator", ["fibonacci_calculator/fibonacci_calculator.py"]),]
 
 ext_options = {"compiler_directives": {"profile": True}, "annotate": True}
@@ -61,7 +61,7 @@ setup(
     test_suite='tests',
     tests_require=test_requirements,
     url='https://github.com/richardscholtens/Fibonacci_Calculator',
-    version='0.1.25',
+    version='0.1.26',
     zip_safe=False,
     ext_modules=cythonize(exts, **ext_options),
     include_dirs=np.get_include(),
