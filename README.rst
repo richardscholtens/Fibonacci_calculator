@@ -52,24 +52,24 @@ https://cython.readthedocs.io/en/latest/
 To make the library available for Linux and Windows the setup.py file
 has to be run on both operational systems.
 
-``
+```
 python3 setup.py sdist bdist_wheel
-``
+```
 
 However, when used on Linux one gets a corrupted file that needs to be repaired
 with auditwheel.
 
-``
+```
 auditwheel repair dist/fibonacci-calculator-0.1.28-cp38-cp38-linux_86_64.whl
-``
+```
 
 It can happen that the auditwheel is not backward compatible. However, it is forward
 compatible. If run into any issues please use a Docker container using the following
 code:
 
-``
+```
 docker run -i -t -v `pwd`:/io quay.io/pypa/manylinux1_x86_64 /bin/bash
-``
+```
 
 Try using git to retrieve the fibonacci-calculator-0.1.28-cp38-cp38-linux_86_64.whl
 package and repair it within the container. After repairing push it in the repository
@@ -78,6 +78,6 @@ wheel package.
 
 After this one can upload the package to pypi.
 
-``
+```
 python3 -m twine upload --repository pypi dist/*
-``
+```
