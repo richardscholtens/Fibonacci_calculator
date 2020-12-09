@@ -67,9 +67,9 @@ It can happen that the auditwheel is not backward compatible. However, it is for
 compatible. If run into any issues please use a Docker container using the following
 code:
 
-``
+```
 docker run -i -t -v `pwd`:/io quay.io/pypa/manylinux1_x86_64 /bin/bash
-``
+```
 
 Try using git to retrieve the fibonacci-calculator-0.1.28-cp38-cp38-linux_86_64.whl
 package and repair it within the container. After repairing push it in the repository
